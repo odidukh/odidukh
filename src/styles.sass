@@ -17,16 +17,23 @@ h2
     all: unset
 
 .homePage
+    height: 100vh
+    width: 100%
     color: white
-    display: flex
-    flex-direction: column
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+    row-gap: 2rem
+
 
 .greeting
     font-size: 3rem
-    align-self: center
-    display: inline-block
+    grid-row: 2 / span 1
+    grid-column: 2 / span 3
+    align-self: end
 
 .proffesion
     font-size: 2rem
-    align-self: center
-    display: block
+    grid-row: 3 / span 1
+    grid-column: 2 / span 3
+    align-self: start
