@@ -1,0 +1,68 @@
+@import colors
+
+@font-face
+    font-family: 'Mulish'
+    src: url('../fonts/Mulish-VariableFont_wght.ttf')
+
+@font-face
+    font-family: 'Dancing'
+    src: url('../fonts/Dancing.ttf')
+
+*
+    height: 100%
+    width: 100%
+    font-family: 'Mulish', 'Roboto', sans-serif
+
+body
+    all: unset
+    background-color: black
+
+.homePage
+    background-image: url('../img/home.jpeg')
+    background-repeat: no-repeat
+    background-size: 100%
+    background-position: center
+
+h1
+    all: unset
+
+h2
+    all: unset
+
+.homePage
+    height: 100vh
+    width: 100%
+    color: white
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: repeat(5, 1fr)
+    row-gap: 2rem
+
+.greeting
+    font-family: 'Dancing', 'Roboto', sans-serif
+    font-size: 7rem
+    font-weight: 500
+    grid-row: 3 / span 1
+    grid-column: 3 / span 3
+    align-self: end
+
+.proffesion
+    font-size: 3rem
+    font-weight: 600
+    grid-row: 4 / span 1
+    grid-column: 3 / span 3
+    align-self: start
+
+.aboutPage
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: repeat(5, 1fr)
+
+.picOfMe
+    grid-row: 1 / span 5
+    grid-column: 1 / span 2
+
+.aboutMeTextBlock
+    color: white
+    grid-row: 3 / span 1
+    grid-column: 3 / span 2
