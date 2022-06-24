@@ -1,5 +1,5 @@
 import React from "react";
-import picOfMe from "../img/me.jpeg";
+import picOfMe from "../img/me.jpg";
 
 const About = () => {
     return (
@@ -18,6 +18,7 @@ const About = () => {
                     <br />
                     and analytical skills. Team player with an eye for detail.
                 </p>
+                <button className="letsTalkButton">Let's Talk</button>
             </div>
         </div>
     );
