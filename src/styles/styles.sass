@@ -9,18 +9,18 @@
     src: url('../fonts/Dancing.ttf')
 
 *
-    height: 100%
-    width: 100%
     font-family: 'Mulish', 'Roboto', sans-serif
 
 body
     all: unset
-    background-color: black
+
+button
+    all: unset
 
 .homePage
     background-image: url('../img/home.jpeg')
     background-repeat: no-repeat
-    background-size: 100%
+    background-size: 100vw 100vh
     background-position: center
 
 h1
@@ -31,12 +31,11 @@ h2
 
 .homePage
     height: 100vh
-    width: 100%
+    width: 100vw
     color: white
     display: grid
     grid-template-columns: repeat(5, 1fr)
     grid-template-rows: repeat(5, 1fr)
-    row-gap: 2rem
 
 .greeting
     font-family: 'Dancing', 'Roboto', sans-serif
@@ -54,15 +53,76 @@ h2
     align-self: start
 
 .aboutPage
-    display: grid
-    grid-template-columns: repeat(5, 1fr)
-    grid-template-rows: repeat(5, 1fr)
+    height: 100vh
+    display: flex
+    background-color: $gainsboro
+    flex-direction: row
 
 .picOfMe
-    grid-row: 1 / span 5
-    grid-column: 1 / span 2
+    flex-basis: 35%
+    flex-grow: 1
 
 .aboutMeTextBlock
-    color: white
-    grid-row: 3 / span 1
-    grid-column: 3 / span 2
+    color: $jet
+    flex-basis: 65%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    h1
+        font-size: 3rem
+        margin-left: 4rem
+    p
+        margin-left: 4rem
+        font-size: 1.3rem
+        flex-basis: content
+
+.letsTalkButton
+    margin-left: 4rem
+    background-color: $jet
+    border-radius: 5px
+    color: $gainsboro
+    font-size: 1.3rem
+    padding: 1rem
+    width: 7rem
+    text-align: center
+
+.skillsPage
+    height: 100vh
+    display: flex
+    background-color: $gainsboro
+    flex-direction: column
+    padding-left: 20%
+    row-gap: 4rem
+    .skillsDescription
+        flex-basis: 50%
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        h1
+            font-size: 3rem
+        p
+            font-size: 1.3rem
+    .skillsTypesList
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        flex-basis: 50%
+        .skillsType
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            flex-basis: 100%
+            .skillsTypeName
+                font-size: 1.3rem
+                margin-left: 4rem
+            .skillsList
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                flex-basis: 100%
+                .skill
+                    font-size: 1.3rem
+                    margin-left: 4rem
+                    margin-bottom: 1rem
