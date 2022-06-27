@@ -59,12 +59,11 @@ h2
     flex-direction: row
 
 .picOfMe
-    flex-basis: 35%
-    flex-grow: 1
+    height: 100%
+    width: auto
 
 .aboutMeTextBlock
     color: $jet
-    flex-basis: 65%
     display: flex
     flex-direction: column
     justify-content: center
@@ -91,7 +90,8 @@ h2
     display: flex
     background-color: $gainsboro
     flex-direction: column
-    padding-left: 20%
+    padding-left: 10%
+    padding-right: 10%
     row-gap: 4rem
     .skillsDescription
         flex-basis: 50%
@@ -102,27 +102,70 @@ h2
             font-size: 3rem
         p
             font-size: 1.3rem
-    .skillsTypesList
+    .skillsBox
         display: flex
         flex-direction: row
-        justify-content: space-around
+        justify-content: space-between
         flex-basis: 50%
-        .skillsType
+        .skillType
             display: flex
             flex-direction: column
-            justify-content: center
-            align-items: center
-            flex-basis: 100%
-            .skillsTypeName
-                font-size: 1.3rem
-                margin-left: 4rem
+            flex-basis: 30%
+            .skillTypeName
+                font-size: 1.5rem
+                padding: 3% 8%
+                border-left: 5px solid $jet
             .skillsList
                 display: flex
                 flex-direction: column
-                justify-content: center
-                align-items: center
                 flex-basis: 100%
-                .skill
-                    font-size: 1.3rem
-                    margin-left: 4rem
+            ul
+                list-style: none
+                padding-left: 1rem
+                li::before
+                    content: '––'
+                    margin-right: 1rem
+            .skillItem
+                font-size: 1.2rem
+
+.contactPage
+    height: 100vh
+    display: flex
+    background-color: $gainsboro
+    flex-direction: column
+    padding-left: 10%
+    padding-right: 10%
+    .contactDescription
+        flex-basis: 50%
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        h1
+            font-size: 3rem
+        p
+            font-size: 1.3rem
+    .emailAndSocialsBlock
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-basis: 50%
+        .emailBlock
+            .emailForm
+                display: flex
+                flex-direction: column
+                flex-basis: 50%
+                .emailFormTitle
+                    font-size: 1.5rem
                     margin-bottom: 1rem
+                .emailFormInput
+                    font-size: 1.2rem
+                    margin-bottom: 1rem
+                    width: 20rem
+                .emailFormButton
+                    background-color: $jet
+                    border-radius: 5px
+                    color: $gainsboro
+                    font-size: 1.2rem
+                    padding: 1rem
+                    width: 7rem
+                    text-align: center
