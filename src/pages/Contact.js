@@ -17,24 +17,29 @@ const Contact = () => {
             </div>
             <div className="emailAndSocialsBlock">
                 <div className="emailBlock">
+                    <h2 className="blockHeader">I'm Available for Hiring!</h2>
                     <form action="" className="emailForm">
-                        <label htmlFor="email">Your Name</label>
-                        <input type="text" placeholder="Your Name" />
-                        <label htmlFor="email">Your Email</label>
-                        <input type="text" placeholder="Your Email" />
-                        <label htmlFor="email">Your Message</label>
+                        <input type="text" placeholder="Your Name*" required />
+                        <input
+                            type="email"
+                            placeholder="Your Email*"
+                            required
+                        />
                         <textarea
+                            required
                             name=""
                             id=""
                             cols="30"
-                            rows="10"
-                            placeholder="Share your Thoughts"
+                            rows="5"
+                            placeholder="Share your Thoughts*"
                         />
-                        <button type="submit">Send Message</button>
+                        <button className="submitButton" type="submit">
+                            Send Message
+                        </button>
                     </form>
                 </div>
                 <div className="socialsBlock">
-                    <h2>Get Me in Social Networks</h2>
+                    <h2 className="blockHeader">Get Me in Social Networks</h2>
                     <ul>
                         <li>LinkedIn</li>
                         <li>Github</li>

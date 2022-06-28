@@ -135,8 +135,9 @@ h2
     flex-direction: column
     padding-left: 10%
     padding-right: 10%
+    gap: 5%
     .contactDescription
-        flex-basis: 50%
+        flex-basis: 40%
         display: flex
         flex-direction: column
         justify-content: flex-end
@@ -148,12 +149,19 @@ h2
         display: flex
         flex-direction: row
         justify-content: space-between
-        flex-basis: 50%
+        flex-basis: 60%
+        gap: 20%
+        .blockHeader
+            display: block
+            font-size: 1.5rem
+            letter-spacing: 3px
+            margin-bottom: 2rem
         .emailBlock
+            flex-basis: 50%
+
             .emailForm
                 display: flex
                 flex-direction: column
-                flex-basis: 50%
                 .emailFormTitle
                     font-size: 1.5rem
                     margin-bottom: 1rem
@@ -169,3 +177,31 @@ h2
                     padding: 1rem
                     width: 7rem
                     text-align: center
+                input
+                    all: unset
+                    border-bottom: 1px solid $jet
+                    outline: none
+                    margin-bottom: 2rem
+                    width: 100%
+                textarea
+                    all: unset
+                    border-bottom: 1px solid $jet
+                    margin-bottom: 1rem
+                    width: 100%
+                    border-bottom: 1px solid $jet
+                    margin-bottom: 3em
+                .submitButton
+                    border: 1px solid $jet
+                    border-radius: 5px
+                    font-size: 1rem
+                    padding: 1rem
+                    width: fit-content
+                    text-align: center
+        .socialsBlock
+            flex-basis: 50%
+            ul
+                list-style: none
+                padding-left: 1rem
+                li::before
+                    content: '––'
+                    margin-right: 1rem
