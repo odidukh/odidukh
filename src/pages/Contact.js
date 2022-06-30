@@ -1,3 +1,4 @@
+import { social } from "../constants";
 import React from "react";
 
 const Contact = () => {
@@ -41,10 +42,13 @@ const Contact = () => {
                 <div className="socialsBlock">
                     <h2 className="blockHeader">Get Me in Social Networks</h2>
                     <ul>
-                        <li>LinkedIn</li>
-                        <li>Github</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
+                        {social.map((social) => (
+                            <li key={social.name}>
+                                <a href={social.url}>
+                                    <img src={social.icon} alt={social.name} />
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
