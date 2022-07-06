@@ -19,3 +19,22 @@ export const social = [
         icon: LinkedInIcon,
     },
 ];
+
+export const navLinks = [
+    {
+        navLinkId: "Home",
+        scrollToId: "homePage",
+    },
+    {
+        navLinkId: "About",
+        scrollToId: "aboutPage",
+    },
+    {
+        navLinkId: "Skills",
+        scrollToId: "skillsPage",
+    },
+    {
+        navLinkId: "Contact",
+        scrollToId: "contactPage",
+    }
+];
