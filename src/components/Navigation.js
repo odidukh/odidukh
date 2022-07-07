@@ -5,7 +5,7 @@ import NavigationLink from "./NavigationLink";
 const Navigation = () => {
     const [activeNavLinkId, setActiveNavLinkId] = React.useState("");
     return (
-        <nav>
+        <nav className="navigationBlock">
             {navLinks.map(({ navLinkId, scrollToId }) => (
                 <NavigationLink
                     navLinkId={navLinkId}
