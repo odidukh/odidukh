@@ -3,7 +3,7 @@ import picOfMe from "../img/me.jpg";
 
 const About = () => {
     return (
-        <div className="aboutPage">
+        <div className="aboutPage" id="aboutPage">
             <img className="picOfMe" src={picOfMe} alt="me" />
             <div className="aboutMeTextBlock">
                 <h1>About Me</h1>

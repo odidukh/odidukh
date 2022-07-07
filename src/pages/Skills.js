@@ -26,7 +26,7 @@ const SKILLS_SET = [
 
 const Skills = () => {
     return (
-        <div className="skillsPage">
+        <div className="skillsPage" id="skillsPage">
             <div className="skillsDescription">
                 <h1>Skillset</h1>
                 <p>
