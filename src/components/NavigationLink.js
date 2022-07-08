@@ -1,11 +1,9 @@
 import React from "react";
+import { NavContext } from "../context/nav-context-and-provider";
 
-const NavigationLink = ({
-    navLinkId,
-    scrollToId,
-    activeNavLinkId,
-    setActiveNavLinkId,
-}) => {
+const NavigationLink = ({ navLinkId, scrollToId }) => {
+    const { activeNavLinkId, setActiveNavLinkId } =
+        React.useContext(NavContext);
     const handleClick = () => {
         setActiveNavLinkId(navLinkId);
 

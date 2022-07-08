@@ -3,15 +3,13 @@ import { navLinks } from "../constants";
 import NavigationLink from "./NavigationLink";
 
 const Navigation = () => {
-    const [activeNavLinkId, setActiveNavLinkId] = React.useState("");
     return (
         <nav className="navigationBlock">
             {navLinks.map(({ navLinkId, scrollToId }) => (
                 <NavigationLink
+                    key={navLinkId}
                     navLinkId={navLinkId}
                     scrollToId={scrollToId}
-                    activeNavLinkId={activeNavLinkId}
-                    setActiveNavLinkId={setActiveNavLinkId}
                 />
             ))}
         </nav>

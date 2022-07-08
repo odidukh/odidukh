@@ -1,4 +1,5 @@
 import React from "react";
+import { useNav } from "../hooks/useNav";
 
 const SKILLS_SET = [
     {
@@ -25,8 +26,9 @@ const SKILLS_SET = [
 ];
 
 const Skills = () => {
+    const skillsRef = useNav("Skills");
     return (
-        <div className="skillsPage" id="skillsPage">
+        <div className="skillsPage" id="skillsPage" ref={skillsRef}>
             <div className="skillsDescription">
                 <h1>Skillset</h1>
                 <p>

@@ -1,9 +1,11 @@
 import React from "react";
+import { useNav } from "../hooks/useNav";
 import picOfMe from "../img/me.jpg";
 
 const About = () => {
+    const aboutRef = useNav("About");
     return (
-        <div className="aboutPage" id="aboutPage">
+        <div className="aboutPage" id="aboutPage" ref={aboutRef}>
             <img className="picOfMe" src={picOfMe} alt="me" />
             <div className="aboutMeTextBlock">
                 <h1>About Me</h1>

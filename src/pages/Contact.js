@@ -1,9 +1,11 @@
 import { social } from "../constants";
 import React from "react";
+import { useNav } from "../hooks/useNav";
 
 const Contact = () => {
+    const contactRef = useNav("Contact");
     return (
-        <div className="contactPage" id="contactPage">
+        <div className="contactPage" id="contactPage" ref={contactRef}>
             <div className="contactDescription">
                 <h1>Contact</h1>
                 <p>
