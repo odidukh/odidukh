@@ -4,8 +4,8 @@
   "description": "- 👋 Hi, my name is Oles Didukh but everybody calls me Oles - 👀 I’m interested in creating new stuff - 🌱 I’m currently learning advanced programming technologies",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
