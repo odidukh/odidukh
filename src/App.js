@@ -8,15 +8,13 @@ import Skills from "./pages/Skills";
 
 const App = () => {
     return (
-        <div>
-            <NavProvider>
-                <Navigation />
-                <Home />
-                <About />
-                <Skills />
-                <Contact />
-            </NavProvider>
-        </div>
+        <NavProvider>
+            <Navigation />
+            <Home />
+            <About />
+            <Skills />
+            <Contact />
+        </NavProvider>
     );
 };
 
