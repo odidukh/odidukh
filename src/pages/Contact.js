@@ -1,6 +1,7 @@
 import { social } from "../constants";
 import React from "react";
 import { useNav } from "../hooks/useNav";
+import ContactForm from "../containers/ContactForm";
 
 const Contact = () => {
     const contactRef = useNav("Contact");
@@ -9,37 +10,15 @@ const Contact = () => {
             <div className="contactDescription">
                 <h1>Contact</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    If you'd like to get in touch, I'd love to hear from you.
+                    Feel free to send me an email or use the form below. Or you
+                    can find me on social media platforms.
                 </p>
             </div>
             <div className="emailAndSocialsBlock">
                 <div className="emailBlock">
                     <h2 className="blockHeader">I'm Available for Hiring!</h2>
-                    <form action="" className="emailForm">
-                        <input type="text" placeholder="Your Name*" required />
-                        <input
-                            type="email"
-                            placeholder="Your Email*"
-                            required
-                        />
-                        <textarea
-                            required
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="5"
-                            placeholder="Share your Thoughts*"
-                        />
-                        <button className="submitButton" type="submit">
-                            Send Message
-                        </button>
-                    </form>
+                    <ContactForm />
                 </div>
                 <div className="socialsBlock">
                     <h2 className="blockHeader">Get Me in Social Networks</h2>
