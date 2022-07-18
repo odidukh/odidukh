@@ -1,7 +1,8 @@
 import { social } from "../constants";
 import React from "react";
 import { useNav } from "../hooks/useNav";
-import ContactForm from "../containers/ContactForm";
+import ContactForm from "../components/ContactForm";
+import { content } from "../content/content";
 
 const Contact = () => {
     const contactRef = useNav("Contact");
@@ -9,11 +10,7 @@ const Contact = () => {
         <div className="contactPage" id="contactPage" ref={contactRef}>
             <div className="contactDescription">
                 <h1>Contact</h1>
-                <p>
-                    If you'd like to get in touch, I'd love to hear from you.
-                    Feel free to send me an email or use the form below. Or you
-                    can find me on social media platforms.
-                </p>
+                <p>{content.contact}</p>
             </div>
             <div className="emailAndSocialsBlock">
                 <div className="emailBlock">

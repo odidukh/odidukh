@@ -1,4 +1,5 @@
 import React from "react";
+import { content } from "../content/content";
 import { useNav } from "../hooks/useNav";
 
 const SKILLS_SET = [
@@ -31,16 +32,7 @@ const Skills = () => {
         <div className="skillsPage" id="skillsPage" ref={skillsRef}>
             <div className="skillsDescription">
                 <h1>Skillset</h1>
-                <p>
-                    Able to work with a variety of technologies and frameworks.
-                    <br />
-                    Participated in a development of project of different sizes.
-                    <br />
-                    Developed both SPAs and mobile apps.
-                    <br />
-                    Proven ability to learn a custom frameworks and libraries.
-                    <br />
-                </p>
+                <p>{content.skills}</p>
             </div>
             <div className="skillsBox">
                 {SKILLS_SET.map((skillSet) => {

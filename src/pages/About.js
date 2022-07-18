@@ -1,4 +1,5 @@
 import React from "react";
+import { content } from "../content/content";
 import { useNav } from "../hooks/useNav";
 import picOfMe from "../img/me.jpg";
 import { navigateTo } from "../misc/misc";
@@ -13,13 +14,7 @@ const About = () => {
             <img className="picOfMe" src={picOfMe} alt="me" />
             <div className="aboutMeTextBlock">
                 <h1>About Me</h1>
-                <p>
-                    Hello. I'm a front-end developer with an extencive
-                    experience in an implemention of various web solutions and
-                    creation mobile apps using opensource and proprietary
-                    frameworks. Have strong creative and analytical skills. Team
-                    player with an eye for details.
-                </p>
+                <p>{content.aboutMe}</p>
                 <button className="letsTalkButton" onClick={handleClick}>
                     Let's Talk
                 </button>
