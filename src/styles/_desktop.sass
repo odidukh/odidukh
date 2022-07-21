@@ -1,0 +1,220 @@
+@media screen and (min-width: 1008px)
+    .homePage
+        background-size: auto
+        background-position: center
+
+    .homePage
+        height: 100%
+        width: 100%
+        color: white
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-template-rows: repeat(5, 1fr)
+
+    .greeting
+        font-size: 7rem
+        font-weight: 500
+        grid-row: 3 / span 1
+        grid-column: 3 / span 3
+        align-self: end
+
+    .proffesion
+        font-size: 3rem
+        font-weight: 600
+        grid-row: 4 / span 1
+        grid-column: 3 / span 3
+        align-self: start
+
+    .aboutPage
+        height: 100%
+        display: flex
+        flex-direction: row
+
+    .picOfMe
+        height: 100%
+        width: auto
+
+    .aboutMeTextBlock
+        display: flex
+        flex-direction: column
+        justify-content: center
+        h1
+            font-size: 3rem
+            margin-left: 4rem
+        p
+            margin-left: 4rem
+            font-size: 1.3rem
+            flex-basis: content
+            width: 75%
+
+    .letsTalkButton
+        margin-left: 4rem
+        background-color: $jet
+        border-radius: 5px
+        color: $gainsboro
+        font-size: 1.3rem
+        padding: 1rem
+        width: 7rem
+        text-align: center
+        transition: all .2s ease-in-out
+        &:hover
+            background-color: white
+            color: $jet
+        &:active
+            transform: scale(0.95)
+
+    .skillsPage
+        height: 100%
+        display: flex
+        background-color: $gainsboro
+        flex-direction: column
+        padding-left: 10%
+        padding-right: 10%
+        row-gap: 4rem
+        .skillsDescription
+            flex-basis: 50%
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            h1
+                font-size: 3rem
+            p
+                font-size: 1.3rem
+                width: 60%
+        .skillsBox
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            flex-basis: 50%
+            .skillType
+                display: flex
+                flex-direction: column
+                flex-basis: 30%
+                .skillTypeName
+                    font-size: 1.5rem
+                    padding: 3% 8%
+                    border-left: 5px solid $jet
+                .skillsList
+                    display: flex
+                    flex-direction: column
+                    flex-basis: 100%
+                ul
+                    list-style: none
+                    padding-left: 1rem
+                    li::before
+                        content: '––'
+                        margin-right: 1rem
+                .skillItem
+                    font-size: 1.2rem
+
+    .contactPage
+        height: 100%
+        display: flex
+        background-color: $gainsboro
+        flex-direction: column
+        padding-left: 10%
+        padding-right: 10%
+        gap: 5%
+        .contactDescription
+            flex-basis: 40%
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            h1
+                font-size: 3rem
+            p
+                width: 40%
+                font-size: 1.3rem
+        .emailAndSocialsBlock
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            flex-basis: 60%
+            gap: 20%
+            .blockHeader
+                display: block
+                font-size: 1.5rem
+                letter-spacing: 3px
+                margin-bottom: 2rem
+            .emailBlock
+                flex-basis: 50%
+
+                .emailForm
+                    display: flex
+                    flex-direction: column
+                    .emailFormTitle
+                        font-size: 1.5rem
+                        margin-bottom: 1rem
+                    .emailFormInput
+                        font-size: 1.2rem
+                        margin-bottom: 1rem
+                        width: 20rem
+                    .emailFormButton
+                        background-color: $jet
+                        border-radius: 5px
+                        color: $gainsboro
+                        font-size: 1.2rem
+                        padding: 1rem
+                        width: 7rem
+                        text-align: center
+                    .submitButton
+                        margin-top: 1.7rem
+                        border: 1px solid $jet
+                        border-radius: 5px
+                        font-size: 1rem
+                        padding: 1rem
+                        width: fit-content
+                        text-align: center
+                        transition: all .2s ease-in-out
+                        &:hover
+                            background-color: white
+                        &:active
+                            transform: scale(0.95)
+            .socialsBlock
+                flex-basis: 50%
+                .blockHeader
+                    text-align: end
+                    font-size: 1.5rem
+                    letter-spacing: 3px
+                    margin-bottom: 2rem
+                ul
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    list-style: none
+                    padding-left: 1rem
+                    li
+                        font-size: 1.2rem
+                        margin-bottom: 1rem
+                        display: flex
+                        align-items: center
+                    li::after
+                        content: '–––'
+                        margin-left: 1rem
+                    li:hover::after
+                        content: '––––'
+
+    .navigationBlock
+        position: fixed
+        top: 5%
+        right: 2%
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        span
+            text-align: center
+            font-size: 1.3rem
+            width: 7rem
+            height: 2rem
+            letter-spacing: 3px
+            margin-bottom: .5rem
+            background-color: $spanish-gray-2
+            color: $gainsboro
+            border-radius: 5px
+            transition: all .2s ease-in-out
+            &:hover
+                transform: scale(1.1)
+            &:active
+                transform: scale(.9)
+            &.activeLink
+                width: 110%

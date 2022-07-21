@@ -1,0 +1,80 @@
+@media screen and (max-width: 640px)
+    .homePage
+        background-size: cover
+        background-position: center
+
+    .homePage
+        height: 100%
+        width: 100%
+        color: white
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: repeat(6, 1fr)
+
+    .greeting
+        font-size: 3rem
+        font-weight: 500
+        grid-row: 3 / span 1
+        grid-column: 2 / span 4
+        align-self: center
+
+    .proffesion
+        font-size: 1.5rem
+        font-weight: 600
+        grid-row: 4 / span 1
+        grid-column: 2 / span 4
+        align-self: center
+
+    .aboutPage
+        display: flex
+        flex-direction: column-reverse
+
+    .picOfMe
+        width: 70%
+
+    .aboutMeTextBlock
+        margin: 5% 5%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        h1
+            font-size: 1.8rem
+            font-weight: bold
+        p
+            font-size: 1.3rem
+            flex-basis: content
+
+    .letsTalkButton
+        background-color: $jet
+        border-radius: 5px
+        color: $gainsboro
+        font-size: 1.3rem
+        padding: 1rem
+        width: 7rem
+        text-align: center
+        transition: all .2s ease-in-out
+        &:hover
+            background-color: white
+            color: $jet
+
+    .contactPage
+        height: 100%
+        display: flex
+        background-color: $gainsboro
+        flex-direction: row
+
+    .contactInfo
+        height: 100%
+        width: auto
+
+    .contactForm
+        height: 100%
+        width: auto
+
+    .contactFormInput
+        height: 100%
+        width: auto
+
+    .contactFormButton
+        height: 100%
+        width: auto
