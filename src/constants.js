@@ -2,6 +2,8 @@ import TwitterIcon from "./img/icons/twitter.svg";
 import GithubIcon from "./img/icons/github.svg";
 import LinkedInIcon from "./img/icons/linkedin.svg";
 
+export const mobileScreenWidth = 640;
+
 export const social = [
     {
         name: "Twitter",
@@ -36,5 +38,5 @@ export const navLinks = [
     {
         navLinkId: "Contact",
         scrollToId: "contactPage",
-    }
+    },
 ];
