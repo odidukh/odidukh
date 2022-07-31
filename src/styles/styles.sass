@@ -26,6 +26,7 @@ h2
 .homePage
     background-image: url('../img/home.jpeg')
     background-repeat: no-repeat
+    background-position: center
 
 .greeting
     font-family: 'Dancing', 'Roboto', sans-serif
@@ -44,3 +45,107 @@ h2
 // CONTACT PAGE
 .contactPage
     background-color: $gainsboro
+
+
+.homePage
+    height: 100%
+    width: 100%
+    color: white
+    display: grid
+
+.aboutPage
+    display: flex
+
+.aboutMeTextBlock
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+
+.letsTalkButton
+    background-color: $jet
+    border-radius: 5px
+    color: $gainsboro
+    font-size: 1.3rem
+    padding: 1rem
+    width: 7rem
+    text-align: center
+    transition: all .2s ease-in-out
+    &:hover
+        background-color: white
+        color: $jet
+    &:active
+        transform: scale(0.95)
+
+.skillsPage
+    height: 100%
+    display: flex
+    background-color: $gainsboro
+    flex-direction: column
+    .skillsDescription
+        display: flex
+        flex-direction: column
+    .skillsBox
+        display: flex
+        .skillType
+            display: flex
+            flex-direction: column
+            ul
+                list-style: none
+                padding-left: 1rem
+                li::before
+                    margin-right: 1rem
+
+.contactPage
+    height: 100%
+    display: flex
+    background-color: $gainsboro
+    flex-direction: column
+    .contactDescription
+        flex-basis: 40%
+        display: flex
+        flex-direction: column
+    .emailAndSocialsBlock
+        display: flex
+        .blockHeader
+            display: block
+        .emailBlock
+            .emailForm
+                display: flex
+                flex-direction: column
+                .submitButton
+                    border: 1px solid $jet
+                    border-radius: 5px
+                    font-size: 1rem
+                    padding: 1rem
+                    width: fit-content
+                    text-align: center
+                    transition: all .2s ease-in-out
+                    &:hover
+                        background-color: white
+                    &:active
+                        transform: scale(0.95)
+        .socialsBlock
+            ul
+                display: flex
+                li
+                    font-size: 1.2rem
+                    display: flex
+                    align-items: center
+
+.navigationBlock
+    position: fixed
+    display: flex
+    flex-direction: column
+    span
+        text-align: center
+        background-color: $spanish-gray-2
+        color: $gainsboro
+        border-radius: 5px
+        transition: all .2s ease-in-out
+        &:hover
+            transform: scale(1.1)
+        &:active
+            transform: scale(.9)
+        &.activeLink
+            width: 110%
