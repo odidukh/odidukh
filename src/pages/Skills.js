@@ -1,33 +1,33 @@
-import React from "react";
-import { content } from "../content/content";
-import { useNav } from "../hooks/useNav";
+import React from 'react';
+import { content } from '../content/content';
+import { useNav } from '../hooks/useNav';
 
 const SKILLS_SET = [
     {
-        type: "Development Skills",
+        type: 'Development Skills',
         skills: [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Redux",
-            "Node",
-            "Express",
-            "MongoDB",
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React',
+            'Redux',
+            'Node',
+            'Express',
+            'MongoDB',
         ],
     },
     {
-        type: "Project Managing Skills",
-        skills: ["Git", "Github", "Jira"],
+        type: 'Project Managing Skills',
+        skills: ['Git', 'Github', 'Jira'],
     },
     {
-        type: "Personal Skills",
-        skills: ["Creative", "Analytical", "Team Player", "Adaptable"],
+        type: 'Personal Skills',
+        skills: ['Creative', 'Analytical', 'Team Player', 'Adaptable'],
     },
 ];
 
 const Skills = () => {
-    const skillsRef = useNav("Skills");
+    const skillsRef = useNav('Skills');
     return (
         <div className="skillsPage" id="skillsPage" ref={skillsRef}>
             <div className="skillsDescription">
@@ -42,7 +42,9 @@ const Skills = () => {
                             <ul className="skillsList">
                                 {skillSet.skills.map((skill) => {
                                     return (
-                                        <li className="skillItem">{skill}</li>
+                                        <li key={skill} className="skillItem">
+                                            {skill}
+                                        </li>
                                     );
                                 })}
                             </ul>

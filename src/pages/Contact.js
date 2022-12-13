@@ -1,11 +1,41 @@
-import { social } from "../constants";
-import React from "react";
-import { useNav } from "../hooks/useNav";
-import ContactForm from "../components/ContactForm";
-import { content } from "../content/content";
+import { social } from '../constants';
+import React, { useState } from 'react';
+import { useNav } from '../hooks/useNav';
+import ContactForm from '../components/ContactForm';
+import { content } from '../content/content';
+import ThanksForMailBlock from '../components/ThanksForMailBlock';
 
 const Contact = () => {
-    const contactRef = useNav("Contact");
+    const [isMailSent, setIsMailSent] = useState(false);
+    const contactRef = useNav('Contact');
+    const changeMailIsSent = () => setIsMailSent(!isMailSent);
+
+    const emailBlock = (
+        <div className="emailBlock">
+            <h2 className="blockHeader">I'm Available for Hiring!</h2>
+            {isMailSent ? (
+                <ThanksForMailBlock changeMailIsSent={changeMailIsSent} />
+            ) : (
+                <ContactForm changeMailIsSent={changeMailIsSent} />
+            )}
+        </div>
+    );
+
+    const socialBlock = (
+        <div className="socialsBlock">
+            <h2 className="blockHeader">Get Me in Social Networks</h2>
+            <ul>
+                {social.map((social) => (
+                    <li key={social.name}>
+                        <a href={social.url}>
+                            <img src={social.icon} alt={social.name} />
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+
     return (
         <div className="contactPage" id="contactPage" ref={contactRef}>
             <div className="contactDescription">
@@ -13,22 +43,8 @@ const Contact = () => {
                 <p>{content.contact}</p>
             </div>
             <div className="emailAndSocialsBlock">
-                <div className="emailBlock">
-                    <h2 className="blockHeader">I'm Available for Hiring!</h2>
-                    <ContactForm />
-                </div>
-                <div className="socialsBlock">
-                    <h2 className="blockHeader">Get Me in Social Networks</h2>
-                    <ul>
-                        {social.map((social) => (
-                            <li key={social.name}>
-                                <a href={social.url}>
-                                    <img src={social.icon} alt={social.name} />
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                {emailBlock}
+                {socialBlock}
             </div>
         </div>
     );
