@@ -3,15 +3,17 @@
 @import desktop
 @import mobile
 @import tablet
+@import buttons
 
 body
     margin: 0
-    body: 0
 
 #root
     width: 100vw
     max-width: 100%
     height: 100vh
+    overflow: scroll
+    scroll-snap-type: y proximity
 
 button
     all: unset
@@ -22,6 +24,14 @@ h1
 h2
     all: unset
 
+.homePage, .aboutPage, .skillsPage, .contactPage
+    scroll-snap-align: start
+    scroll-snap-stop: normal
+
+.aboutPage, .skillsPage, .contactPage
+    display: flex
+    background-color: $gainsboro
+
 // HOME PAGE 
 .homePage
     background-image: url('../img/home.jpeg')
@@ -31,21 +41,8 @@ h2
 .greeting
     font-family: 'Dancing', 'Roboto', sans-serif
 
-// ABOUT PAGE
-.aboutPage
-    background-color: $gainsboro
-
 .aboutMeTextBlock
     color: $jet
-
-// SKILLS PAGE
-.skillsPage
-    background-color: $gainsboro
-
-// CONTACT PAGE
-.contactPage
-    background-color: $gainsboro
-
 
 .homePage
     height: 100%
@@ -53,14 +50,10 @@ h2
     color: white
     display: grid
 
-.aboutPage
-    display: flex
-
 .aboutMeTextBlock
     display: flex
     flex-direction: column
     justify-content: center
-
 
 .letsTalkButton
     background-color: $jet
@@ -78,9 +71,6 @@ h2
         transform: scale(0.95)
 
 .skillsPage
-    height: 100%
-    display: flex
-    background-color: $gainsboro
     flex-direction: column
     .skillsDescription
         display: flex
@@ -97,9 +87,6 @@ h2
                     margin-right: 1rem
 
 .contactPage
-    height: 100%
-    display: flex
-    background-color: $gainsboro
     flex-direction: column
     .contactDescription
         flex-basis: 40%
