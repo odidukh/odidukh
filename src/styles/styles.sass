@@ -72,6 +72,7 @@ h2
 
 .skillsPage
     flex-direction: column
+    justify-content: space-evenly
     .skillsDescription
         display: flex
         flex-direction: column
@@ -85,6 +86,20 @@ h2
                 padding-left: 1rem
                 li::before
                     margin-right: 1rem
+    .cvButton
+        background-color: $jet
+        border-radius: 5px
+        color: $gainsboro
+        font-size: 1.3rem
+        padding: 1rem
+        width: 10rem
+        text-align: center
+        transition: all .2s ease-in-out
+        &:hover
+            background-color: white
+            color: $jet
+        &:active
+            transform: scale(0.95)
 
 .contactPage
     flex-direction: column
@@ -101,15 +116,17 @@ h2
                 display: flex
                 flex-direction: column
             .submitButton
-                border: 1px solid $jet
+                background-color: $jet
                 border-radius: 5px
-                font-size: 1rem
+                color: $gainsboro
+                font-size: 1.3rem
                 padding: 1rem
-                width: fit-content
+                width: 9rem
                 text-align: center
                 transition: all .2s ease-in-out
                 &:hover
                     background-color: white
+                    color: $jet
                 &:active
                     transform: scale(0.95)
         .socialsBlock

@@ -1,6 +1,7 @@
 import React from 'react';
 import { content } from '../content/content';
 import { useNav } from '../hooks/useNav';
+import { CV_URL } from '../constants';
 
 const SKILLS_SET = [
     {
@@ -28,6 +29,11 @@ const SKILLS_SET = [
 
 const Skills = () => {
     const skillsRef = useNav('Skills');
+
+    const dowloadCV = () => {
+        window.open(CV_URL, '_blank');
+    };
+
     return (
         <div className="skillsPage" id="skillsPage" ref={skillsRef}>
             <div className="skillsDescription">
@@ -52,6 +58,10 @@ const Skills = () => {
                     );
                 })}
             </div>
+
+            <button className="cvButton" onClick={dowloadCV}>
+                Download CV
+            </button>
         </div>
     );
 };
