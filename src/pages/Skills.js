@@ -2,30 +2,32 @@ import React from 'react';
 import { content } from '../content/content';
 import { useNav } from '../hooks/useNav';
 import { CV_URL } from '../constants';
+import { SKILLS_SET } from '../constants';
 
-const SKILLS_SET = [
-    {
-        type: 'Development Skills',
-        skills: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'React',
-            'Redux',
-            'Node',
-            'Express',
-            'MongoDB',
-        ],
-    },
-    {
-        type: 'Project Managing Skills',
-        skills: ['Git', 'Github', 'Jira'],
-    },
-    {
-        type: 'Personal Skills',
-        skills: ['Creative', 'Analytical', 'Team Player', 'Adaptable'],
-    },
-];
+const ListOfScills = ({ type }) => {
+    return (
+        <div className="skillsType" key={type.type}>
+            <h2 className="skillsTypeName">{type.type}</h2>
+            <ul className="skillsList">
+                {type.skills.map((skill) => {
+                    return (
+                        <li key={skill.name} className="skillItem">
+                            <span className="skillNameWithLevel">
+                                <span className="skillName">{skill.name}</span>
+                                <span className="skillLevel">
+                                    {skill.level}
+                                </span>
+                            </span>
+                            <span className="skillExperience">
+                                {skill.experience}
+                            </span>
+                        </li>
+                    );
+                })}
+            </ul>
+        </div>
+    );
+};
 
 const Skills = () => {
     const skillsRef = useNav('Skills');
@@ -42,20 +44,7 @@ const Skills = () => {
             </div>
             <div className="skillsBox">
                 {SKILLS_SET.map((skillSet) => {
-                    return (
-                        <div className="skillType" key={skillSet.type}>
-                            <h2 className="skillTypeName">{skillSet.type}</h2>
-                            <ul className="skillsList">
-                                {skillSet.skills.map((skill) => {
-                                    return (
-                                        <li key={skill} className="skillItem">
-                                            {skill}
-                                        </li>
-                                    );
-                                })}
-                            </ul>
-                        </div>
-                    );
+                    return <ListOfScills type={skillSet} key={skillSet.id} />;
                 })}
             </div>
 

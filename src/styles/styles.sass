@@ -18,10 +18,7 @@ body
 button
     all: unset
 
-h1
-    all: unset
-
-h2
+li, ul
     all: unset
 
 .homePage, .aboutPage, .skillsPage, .contactPage
@@ -78,14 +75,35 @@ h2
         flex-direction: column
     .skillsBox
         display: flex
-        .skillType
+        .skillsType
             display: flex
             flex-direction: column
-            ul
-                list-style: none
-                padding-left: 1rem
-                li::before
-                    margin-right: 1rem
+            .skillsTypeName:
+                font-size: 1.5rem
+
+            .skillsList
+                display: flex
+                flex-direction: column
+
+                .skillItem
+                    display: flex
+                    justify-content: space-between
+                    flex-direction: colomn
+                    padding: .5rem
+                    border-bottom: 1px solid $jet
+
+                    .skillNameWithLevel
+                        display: flex
+                        flex-direction: column
+
+                        .skillName
+                            font-size: 1.3rem
+                            font-weight: 600
+                        .skillLevel
+                            font-size: 1rem
+
+                    .skillExperience
+                        font-size: 1.3rem
     .cvButton
         background-color: $jet
         border-radius: 5px

@@ -24,6 +24,125 @@ export const social = [
     },
 ];
 
+
+export const SKILLS_SET = [
+    {
+        id: 1,
+        type: 'Programming Languages',
+        skills: [
+            {
+                name: 'JavaScript',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'TypeScript',
+                level: 'Advanced',
+                experience: '3 years',
+            },
+            {
+                name: 'HTML5',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'CSS3',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'SASS/SCSS',
+                level: 'Expert',
+                experience: '5 years',
+            },
+        ],
+    },
+    {
+        id: 2,
+        type: 'Frameworks & Libraries',
+        skills: [
+            {
+                name: 'React',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'Redux',
+                level: 'Advanced',
+                experience: '4 years',
+            },
+            {
+                name: 'React Router',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'Material-UI',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'Bootstrap',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'jQuery',
+                level: 'Advanced',
+                experience: '4 years',
+            },
+        ],
+    },
+    {
+        id: 3,
+        type: 'Tools & Methodologies',
+        skills: [
+            {
+                name: 'Jira',
+                level: 'Advanced',
+                experience: '4 years',
+            },
+            {
+                name: 'Figma',
+                level: 'Advanced',
+                experience: '4 years',
+            },
+            {
+                name: 'Agile (Scrum, Kanban)',
+                level: 'Expert',
+                experience: '5 years',
+            },
+        ],
+    },
+    {
+        id: 4,
+        type: 'Personal Skills',
+        skills: [
+            {
+                name: 'Teamwork',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'Communication',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'Problem-Solving',
+                level: 'Expert',
+                experience: '5 years',
+            },
+            {
+                name: 'Time Management',
+                level: 'Expert',
+                experience: '5 years',
+            },
+        ],
+    },
+];
+
+
 export const navLinks = [
     {
         navLinkId: "Home",
